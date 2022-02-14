@@ -2,6 +2,9 @@
 
     $acao = 'recuperar';
     require 'tarefa_controller.php';
+    echo'<pre>';
+    print_r($tarefas);
+    echo'</pre>';
 ?>
 
 <html>

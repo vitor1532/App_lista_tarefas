@@ -11,8 +11,8 @@
 
             try {
 
-                $conexao = new POD(
-                    "mysql:host-$this->host; dbname=$this->dbname",
+                $conexao = new PDO(
+                    "mysql:host=$this->host;dbname=$this->dbname",
                     "$this->user",
                     "$this->pass"
                 );

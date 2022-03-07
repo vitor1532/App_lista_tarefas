@@ -1,9 +1,9 @@
 <?php
-
     require '../../App_lista_tarefas_private/tarefa.php';
     require '../../App_lista_tarefas_private/tarefa.service.php';
     require '../../App_lista_tarefas_private/conexao.php';
 
+    $tarefas = null;
     $acao = isset($_GET['acao']) ? $_GET['acao'] : $acao;
 
     if($acao == 'inserir') {
@@ -27,4 +27,5 @@
     }
 
 ?>
+
 

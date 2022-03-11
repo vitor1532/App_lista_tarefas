@@ -11,7 +11,8 @@
     }
 
     public function __set($attr, $valor) {
-    $this->$attr = $valor;
+         $this->$attr = $valor;
+         return $this;
     }
 
 

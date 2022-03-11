@@ -18,12 +18,6 @@
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
 		<script>
-
-			function atualizarStatus(id, status) {
-
-
-
-			}
 			
 			function editar(id, txt_tarefa) {
 				
@@ -72,6 +66,18 @@
 
 			}
 
+			function remover (id) {
+
+				location.href='todas_tarefas.php?acao=remover&id='+id;
+
+			}
+
+			function atualizarStatus(id, status) {
+
+				location.href='todas_tarefas.php?acao=atualizarStatus'
+				
+			}
+
 		</script>
 
 	</head>
@@ -110,9 +116,9 @@
                                         	<?= $tarefa->tarefa ?> (<?= $tarefa->status ?>)
                                         </div>
                                         <div class="col-sm-3 mt-2 d-flex justify-content-between">
-                                            <i class="fas fa-trash-alt fa-lg text-danger"></i>
+                                            <i class="fas fa-trash-alt fa-lg text-danger" onclick="remover(<?= $tarefa->id ?>)"></i>
                                             <i class="fas fa-edit fa-lg text-info" onclick="editar(<?= $tarefa->id ?>, '<?= $tarefa->tarefa ?>')"></i>
-                                            <i onclick="atualizarStatus(<?= $tarefa->id, $tarefa->status ?>)" class="fas fa-check-square fa-lg text-success"></i>
+                                            <i onclick="atualizarStatus(<?= $tarefa->id, $tarefa->status ?>)" class="fas fa-check-square fa-lg text-success attStatus"></i>
                                         </div>
                                     </div>
 
